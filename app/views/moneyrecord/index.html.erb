@@ -1,0 +1,23 @@
+<% @page_title = "収入科目一覧" %>
+<h2><%= @page_title %></h2>
+
+<%if @money_records.present? %>
+<table>
+    <thread>
+        <tr>
+            <th>使ったもの</th>
+        </tr>
+    </thread>
+    <tbody>
+        <% @money_records.each do |money_records| %>
+            <tr>
+                <td><%= money_records.name %></td>
+                <td><%= money_records.description %></td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
+
+<% else %>
+<p>登録されている収入科目がありません。</p>
+<% end %>  

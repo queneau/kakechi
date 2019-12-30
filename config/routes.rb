@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  get 'moneyrecord' => 'money_record#index'
+  get 'moneyrecord' => 'moneyrecord#index'
 end

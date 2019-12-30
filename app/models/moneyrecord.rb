@@ -1,0 +1,2 @@
+class Moneyrecord < ApplicationRecord
+end
