@@ -1,2 +1,2 @@
-class List < ApplicationRecord
+class MoneyRecord < ApplicationRecord
 end
