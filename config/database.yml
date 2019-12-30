@@ -5,13 +5,16 @@ default: &default
   timeout: 5000
   username: root
   password: <%= ENV.fetch("DB_PASS") { } %>
-  socket: /var/lib/mysql/mysql.sock
 
 development:
   <<: *default
+  socket: /tmp/mysql.sock
+  database: kakechi_development
 
 test:
   <<: *default
 
 production:
   <<: *default
+  socket: /var/lib/mysql/mysql.sock
+  database: kakechi_production
