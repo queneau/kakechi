@@ -1,0 +1,29 @@
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="custom.css.scss" type="text/css">
+</head>
+<h1>編集</h1>
+
+<body>
+    <div class="row">
+        <%= form_for @moneyrecord, :url => { :controller => :moneyrecord, :action => :edit } do |f| %>
+                <%= f.hidden_field :id, value: @moneyrecord.id %>
+                <%= f.label :"月" %>
+                <%= f.text_field :month %>
+                <br>
+                <%= f.label :"日" %>
+                <%= f.text_field :day %>
+                <br>
+                <%= f.label :"使ったもの" %>
+                <%= f.text_field :item %>
+                <br>
+                <%= f.label :"金額" %>
+                <%= f.text_field :amount %>
+                <br>
+                <br>
+            <%= f.submit "編集", class: "btn btn-primary" %>
+
+        <% end %>
+     
+    </div>
+</body>

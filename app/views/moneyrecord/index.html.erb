@@ -1,23 +1,40 @@
-<% @page_title = "収入科目一覧" %>
+<% @page_title = "一覧" %>
 <h2><%= @page_title %></h2>
 
-<%if @money_records.present? %>
+<div class="commands">
+  <%= link_to '新規追加', [:moneyrecord, :new] %>
+</div>
+
+
+<%if @moneyrecords.present? %>
 <table>
     <thread>
         <tr>
-            <th>使ったもの</th>
+        
+            <th>名称</th>
+            <th>金額</th>
+            <th>操作</th>
         </tr>
     </thread>
     <tbody>
-        <% @money_records.each do |money_records| %>
+        <% @moneyrecords.each do |moneyrecord| %>
             <tr>
-                <td><%= money_records.name %></td>
-                <td><%= money_records.description %></td>
+                <td><%= moneyrecord.item %></td>
+                <td><%= moneyrecord.amount %></td>
+                <td>
+                <%= link_to '削除', "/moneyrecord/#{moneyrecord.id}", method: :delete %>
+                <%= link_to '編集', "/moneyrecord/#{moneyrecord.id}" %>
+     
+                </td>
             </tr>
         <% end %>
     </tbody>
 </table>
 
 <% else %>
-<p>登録されている収入科目がありません。</p>
-<% end %>  
+    <p>未登録</p>
+<% end %>
+
+<ul>
+<%= link_to "TOP", :top %>
+</ul>
