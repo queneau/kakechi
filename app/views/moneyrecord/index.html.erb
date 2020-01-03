@@ -7,18 +7,23 @@
 
 
 <%if @moneyrecords.present? %>
-<table>
+<table border="1">
     <thread>
         <tr>
-        
+            <th>月</th>
+            <th>日</th>
             <th>名称</th>
             <th>金額</th>
+
             <th>操作</th>
+            
         </tr>
     </thread>
     <tbody>
         <% @moneyrecords.each do |moneyrecord| %>
             <tr>
+                <td><%= moneyrecord.month %></td>
+                <td><%= moneyrecord.day %></td>
                 <td><%= moneyrecord.item %></td>
                 <td><%= moneyrecord.amount %></td>
                 <td>

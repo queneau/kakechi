@@ -1,24 +1,16 @@
-# README
+# 家計簿アプリ
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+```
+ $ git pull
+```
+mysqlのrootユーザーのパスワード変更．
+passを環境変数DB_PASSに入れる
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+database作成
+```
+$ kakechi_development
+```
+```
+$ Rails db:migrate
+$ Rails s
+```
