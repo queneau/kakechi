@@ -5,7 +5,8 @@
 <h1>追加</h1>
 
 <body>
-    <div class="row">
+
+    <!-- <div class="row"></div> -->
         <%= form_for @moneyrecord, :url => { :controller => :moneyrecord, :action => :create } do |f| %>
                 <%= f.label :"月" %>
                 <%= f.text_field :month %>
@@ -24,5 +25,6 @@
 
         <% end %>
      
-    </div>
+    <!-- </div> -->
+
 </body>

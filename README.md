@@ -11,6 +11,6 @@ database作成
 $ kakechi_development
 ```
 ```
-$ Rails db:migrate
-$ Rails s
+$ rails db:migrate
+$ rails s
 ```
